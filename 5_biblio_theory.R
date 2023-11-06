@@ -13,12 +13,16 @@ theme_set(theme_bw())
 
 dat <- convert2df(file = "wos.bib", dbsource = "wos", format = "bibtex")
 
+dat2 <- 
+  dat %>% 
+  filter(DT %in% c("ARTICLE", "ARTICLE; PROCEEDINGS PAPER", "PROCEEDINGS PAPER", "REVIEW"))
+
 
 # Theory related metrics --------------------------------------------------
 
 ## 1) Lotka's law ----
 
-result <- biblioAnalysis(dat)
+result <- biblioAnalysis(dat2)
 L <- lotka(result)
 
 L$AuthorProd #observed distribution of author productivity
@@ -50,7 +54,7 @@ ldata %>%
 
 ## 2) Bradford's law ----
 
-bl <- bradford(dat)
+bl <- bradford(dat2)
 bl
 
 # Summary for each zone
