@@ -1,6 +1,7 @@
-# Bibliometric analysis - relationship-related metrics (science mapping)
+# How to write a bibliometric paper - relationship-related metrics (science mapping)
 # Tengku Hanis (https://tengkuhanis.netlify.app/)
-# Oct31, 2023
+# Jom Research (https://jomresearch.netlify.app/)
+# Nov7, 2023
 
 # Packages ----------------------------------------------------------------
 

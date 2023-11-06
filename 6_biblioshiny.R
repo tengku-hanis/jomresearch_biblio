@@ -1,7 +1,7 @@
-# Bibliometric analysis
+# How to write a bibliometric paper - biblioshiny
 # Tengku Hanis (https://tengkuhanis.netlify.app/)
-# Oct31, 2023
-
+# Jom Research (https://jomresearch.netlify.app/)
+# Nov7, 2023
 # Biblioshiny -------------------------------------------------------------
 
 bibliometrix::biblioshiny()

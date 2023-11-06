@@ -1,6 +1,7 @@
-# Bibliometric analysis - other measures
+# How to write a bibliometric paper - other measures
 # Tengku Hanis (https://tengkuhanis.netlify.app/)
-# Oct31, 2023
+# Jom Research (https://jomresearch.netlify.app/)
+# Nov7, 2023
 
 # Packages ----------------------------------------------------------------
 
