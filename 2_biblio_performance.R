@@ -89,7 +89,6 @@ auth_data %>%
          type = fct_recode(type, 
                            Article = "ARTICLE", 
                            Review = "REVIEW")) %>% 
-  filter(!is.na(type)) %>% 
   filter(no_auth < 50) %>% #try removing this line
   ggplot(aes(no_auth, freq, fill = type)) + 
   geom_bar(stat = "identity") + 
