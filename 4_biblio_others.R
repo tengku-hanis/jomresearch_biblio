@@ -30,7 +30,12 @@ Map$documentToClusters %>%
   filter(Assigned_cluster == "tamoxifen") %>% 
   select(TI, DI)
 
-## 2) Thematic evolution
+## 2) Thematic evolution ----
+
+years <- c(2003, 2013) #cut off points
+theme_evo <- thematicEvolution(dat2, field = "ID", years = years, n = 100, minFreq = 2)
+plotThematicEvolution(theme_evo$Nodes, theme_evo$Edges)
+
 
 ## 3) Trending keywords ----
 
