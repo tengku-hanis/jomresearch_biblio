@@ -30,8 +30,9 @@ Map$documentToClusters %>%
   filter(Assigned_cluster == "tamoxifen") %>% 
   select(TI, DI)
 
+## 2) Thematic evolution
 
-## 2) Trending keywords ----
+## 3) Trending keywords ----
 
 trend_kw <- fieldByYear(dat2, field = "ID", timespan = c(2010,2023),
                         min.freq = 1, n.items = 5, graph = TRUE) 
@@ -46,14 +47,14 @@ ggplot(dat_kw, aes(year_med, freq)) +
   xlab("Year") +
   ylab("Frequency")
 
-## 3) Authors' dominance ----
+## 4) Authors' dominance ----
 
 result <- biblioAnalysis(dat2)
 dom <- dominance(result, k=10)
 dom
 ?dominance #detail how dominance factor calculated
 
-## 4) Top-author productivity over time ----
+## 5) Top-author productivity over time ----
 
 topAU <- authorProdOverTime(dat2, k=10)
 topAU$graph
@@ -61,5 +62,5 @@ topAU$graph
 head(topAU$dfAU) #author's productivity per year
 head(topAU$dfPapersAU) #author's document list
 
-## 5) Three fields plot
+## 6) Three fields plot
 threeFieldsPlot(dat2, fields = c("AU", "DE", "SO"), n = c(20, 20, 20))
